@@ -1,0 +1,837 @@
+<!-- JASA LANDING PAGE - BLOGGER COMPATIBLE VERSION -->
+<!-- Mulai dari sini -->
+
+<!-- META PIXEL CODE (VIEW CONTENT) -->
+<!-- Ganti YOUR_PIXEL_ID dengan ID Pixel Facebook Anda -->
+<script>
+//<![CDATA[
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f.fbq._fbq)f.fbq._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3732077753708528'); 
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {
+    content_name: 'Jasa Landing Page Profesional',
+    content_category: 'Layanan Website',
+    value: 99000,
+    currency: 'IDR'
+  });
+//]]>
+</script>
+<!-- END META PIXEL CODE -->
+
+<!-- PANGGIL TAILWIND CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+//<![CDATA[
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    bg: '#08080c',
+                    fg: '#fafaf9',
+                    muted: '#a8a29e',
+                    accent: '#d97706',
+                    gold: '#fbbf24',
+                    card: 'rgba(251, 191, 36, 0.03)',
+                    border: 'rgba(251, 191, 36, 0.15)'
+                },
+                fontFamily: {
+                    display: ['DM Serif Display', 'serif'],
+                    body: ['Plus Jakarta Sans', 'sans-serif']
+                }
+            }
+        }
+    }
+//]]>
+</script>
+
+<!-- CUSTOM CSS & FONTS -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+    :root {
+        --bg: #08080c;
+        --fg: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #d97706;
+        --gold: #fbbf24;
+    }
+    
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg);
+        color: var(--fg);
+    }
+    
+    .font-display {
+        font-family: 'DM Serif Display', serif;
+    }
+    
+    .bg-pattern {
+        background-image: 
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251, 191, 36, 0.08) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 40% at 80% 100%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
+    }
+    
+    .noise-overlay::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.03;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        z-index: 1000;
+    }
+    
+    .gold-line {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    
+    .service-card {
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.04) 0%, rgba(251, 191, 36, 0.01) 100%);
+        border: 1px solid rgba(251, 191, 36, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .service-card:hover {
+        border-color: rgba(251, 191, 36, 0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -15px rgba(251, 191, 36, 0.15);
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%);
+        color: var(--bg);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .btn-primary::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .btn-primary:hover::before {
+        left: 100%;
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px -5px rgba(251, 191, 36, 0.4);
+    }
+    
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    
+    .price-strike {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .price-strike::after {
+        content: '';
+        position: absolute;
+        left: -5%;
+        top: 50%;
+        width: 110%;
+        height: 2px;
+        background: var(--accent);
+        transform: rotate(-8deg);
+    }
+    
+    .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: float 8s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+        50% { transform: translateY(-30px) translateX(15px); opacity: 0.6; }
+    }
+    
+    .countdown-box {
+        background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(217, 119, 6, 0.05) 100%);
+        border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+    
+    .testimonial-card {
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.03) 0%, transparent 100%);
+        border-left: 2px solid var(--gold);
+    }
+    
+    .faq-item {
+        border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+    }
+    
+    .faq-question {
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .faq-question:hover {
+        color: var(--gold);
+    }
+    
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    
+    .faq-answer.open {
+        max-height: 300px;
+    }
+    
+    .faq-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .faq-icon.rotate {
+        transform: rotate(180deg);
+    }
+    
+    .guarantee-badge {
+        background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .reveal {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+        .particle {
+            animation: none;
+        }
+        .btn-primary::before {
+            display: none;
+        }
+    }
+    
+    button:focus-visible,
+    a:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 2px;
+    }
+</style>
+
+<!-- STRUKTUR HTML UTAMA -->
+<main class="relative max-w-2xl mx-auto px-5 py-8 bg-pattern noise-overlay">
+    
+    <!-- Floating Particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="top: 60%; left: 85%; animation-delay: 2s;"></div>
+        <div class="particle" style="top: 80%; left: 20%; animation-delay: 4s;"></div>
+        <div class="particle" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
+        <div class="particle" style="top: 50%; left: 40%; animation-delay: 3s;"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-[85vh] flex flex-col justify-center py-16">
+        <div class="text-center">
+            <p class="reveal text-muted text-sm tracking-[0.2em] uppercase mb-6 font-medium">Layanan Website Profesional</p>
+            
+            <h1 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-fg mb-6">
+                Bisnis Anda Tampil<br/>
+                <span class="text-gold">Lebih Kredibel</span><br/>
+                dalam 3-5 Hari
+            </h1>
+            
+            <p class="reveal reveal-delay-2 text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto">
+                Website profesional untuk UMKM, personal branding, dan kebutuhan digital lainnya. Tanpa ribet, tanpa skill teknis.
+            </p>
+            
+            <div class="reveal reveal-delay-3 gold-line w-24 mx-auto mb-8"></div>
+            
+            <a href="#harga" class="reveal reveal-delay-4 btn-primary inline-block px-10 py-4 rounded-lg text-lg tracking-wide">
+                Lihat Penawaran Spesial
+            </a>
+            <p class="reveal reveal-delay-4 text-muted text-sm mt-3">Kuota terbatas untuk bulan ini</p>
+        </div>
+    </section>
+
+    <!-- STOP SECTION -->
+    <section class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Apakah Ini Yang Anda Rasakan?
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="reveal service-card rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                    <span class="text-gold text-xl mt-1">01</span>
+                    <p class="text-fg leading-relaxed">
+                        Punya bisnis yang sudah berjalan, tapi masih mengandalkan media sosial saja sebagai identitas digital.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-1 service-card rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                    <span class="text-gold text-xl mt-1">02</span>
+                    <p class="text-fg leading-relaxed">
+                        Ingin terlihat lebih profesional di mata klien, tapi bingung harus mulai dari mana.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-2 service-card rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                    <span class="text-gold text-xl mt-1">03</span>
+                    <p class="text-fg leading-relaxed">
+                        Tertarik membuat website, tapi terhalang biaya yang dianggap terlalu tinggi.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-3 service-card rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                    <span class="text-gold text-xl mt-1">04</span>
+                    <p class="text-fg leading-relaxed">
+                        Pernah order website, tapi hasilnya mengecewakan dan tidak sesuai ekspektasi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="reveal text-center text-muted mt-8 text-lg italic">
+            Jika jawabannya "YA", Anda berada di tempat yang tepat.
+        </p>
+    </section>
+
+    <!-- LOOK SECTION -->
+    <section class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Solusi Untuk Kebutuhan<br/>Digital Anda
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-6">
+            <div class="reveal service-card rounded-xl p-8">
+                <h3 class="text-gold font-semibold text-lg mb-3">Landing Page Penjualan</h3>
+                <p class="text-fg leading-relaxed mb-4">
+                    Halaman khusus untuk menampilkan produk atau jasa Anda dengan fokus pada konversi. Cocok untuk kampanye iklan dan promosi.
+                </p>
+                <ul class="space-y-2 text-muted">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Desain responsif untuk semua perangkat
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Terintegrasi dengan WhatsApp
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Revisi hingga maksimal 3x
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="reveal reveal-delay-1 service-card rounded-xl p-8">
+                <h3 class="text-gold font-semibold text-lg mb-3">Company Profile</h3>
+                <p class="text-fg leading-relaxed mb-4">
+                    Website perusahaan yang menampilkan profil bisnis secara profesional. Meningkatkan kepercayaan calon klien dan partner bisnis.
+                </p>
+                <ul class="space-y-2 text-muted">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Halaman lengkap (Tentang, Layanan, Kontak)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Integrasi Google Maps
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Form kontak langsung ke email
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="reveal reveal-delay-2 service-card rounded-xl p-8">
+                <h3 class="text-gold font-semibold text-lg mb-3">Biolink dan Undangan Digital</h3>
+                <p class="text-fg leading-relaxed mb-4">
+                    Halaman link untuk Instagram/TikTok yang elegan, atau undangan pernikahan yang bisa dibagikan secara digital.
+                </p>
+                <ul class="space-y-2 text-muted">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Desain custom sesuai branding
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Fitur RSVP untuk undangan
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Musik latar opsional
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACT SECTION -->
+    <section class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Mengapa Memilih Kami?
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-6">
+            <div class="reveal service-card rounded-xl p-6">
+                <h3 class="text-gold font-semibold mb-2">Proses Cepat dan Terstruktur</h3>
+                <p class="text-muted leading-relaxed">
+                    Dari briefing hingga website siap digunakan dalam 3-5 hari kerja. Anda mendapat update progress setiap tahapan.
+                </p>
+            </div>
+            
+            <div class="reveal reveal-delay-1 service-card rounded-xl p-6">
+                <h3 class="text-gold font-semibold mb-2">Harga Transparan</h3>
+                <p class="text-muted leading-relaxed">
+                    Biaya yang tercantum sudah mencakup desain, development, dan revisi. Tidak ada biaya tersembunyi.
+                </p>
+            </div>
+            
+            <div class="reveal reveal-delay-2 service-card rounded-xl p-6">
+                <h3 class="text-gold font-semibold mb-2">Domain Fleksibel</h3>
+                <p class="text-muted leading-relaxed">
+                    Gunakan domain sub kami atau domain kustom Anda. Biaya tambahan domain kustom akan diinformasikan di awal.
+                </p>
+            </div>
+            
+            <div class="reveal reveal-delay-3 service-card rounded-xl p-6">
+                <h3 class="text-gold font-semibold mb-2">Dukungan Pasca Project</h3>
+                <p class="text-muted leading-relaxed">
+                    Konsultasi gratis selama 7 hari setelah website jadi. Kami bantu jika ada yang perlu disesuaikan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Apa Kata Mereka
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-6">
+            <div class="reveal testimonial-card rounded-xl p-6 bg-card">
+                <p class="text-fg leading-relaxed mb-4 italic">
+                    "Prosesnya cepat dan hasilnya memuaskan. Website company profile kami jadi lebih profesional. Tim responsif saat ada revisi."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
+                        R
+                    </div>
+                    <div>
+                        <p class="text-fg font-medium">Rizky Permadi</p>
+                        <p class="text-muted text-sm">Owner, Toko Elektronik</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-1 testimonial-card rounded-xl p-6 bg-card">
+                <p class="text-fg leading-relaxed mb-4 italic">
+                    "Awalnya ragu karena harga terjangkau, tapi hasil landing page-nya kualitasnya bagus. Desainnya modern dan fast loading."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
+                        S
+                    </div>
+                    <div>
+                        <p class="text-fg font-medium">Sinta Dewi</p>
+                        <p class="text-muted text-sm">Founder, Online Shop</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-2 testimonial-card rounded-xl p-6 bg-card">
+                <p class="text-fg leading-relaxed mb-4 italic">
+                    "Undangan digital untuk pernikahan saya sangat cantik. Teman-teman banyak yang memuji. Terima kasih banyak!"
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
+                        A
+                    </div>
+                    <div>
+                        <p class="text-fg font-medium">Anisa Rahma</p>
+                        <p class="text-muted text-sm">Customer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCARCITY SECTION -->
+    <section class="py-8">
+    <div class="reveal countdown-box rounded-xl p-6 text-center" style="border: 1px solid rgba(181, 148, 16, 0.3);">
+        <p class="text-gold font-semibold mb-2">Penawaran Terbatas</p>
+        <p class="text-muted text-sm mb-4">Harga promo berlaku untuk 10 pemesan berikutnya</p>
+        
+        <div class="flex justify-center gap-4" id="countdown-timer">
+            <div class="text-center">
+                <span class="block text-3xl font-bold text-fg" id="days-val">00</span>
+                <span class="text-muted text-xs uppercase tracking-wider">Hari</span>
+            </div>
+            <span class="text-2xl text-gold">:</span>
+            <div class="text-center">
+                <span class="block text-3xl font-bold text-fg" id="hours-val">00</span>
+                <span class="text-muted text-xs uppercase tracking-wider">Jam</span>
+            </div>
+            <span class="text-2xl text-gold">:</span>
+            <div class="text-center">
+                <span class="block text-3xl font-bold text-fg" id="minutes-val">00</span>
+                <span class="text-muted text-xs uppercase tracking-wider">Menit</span>
+            </div>
+            <span class="text-2xl text-gold">:</span>
+            <div class="text-center">
+                <span class="block text-3xl font-bold text-fg" id="seconds-val">00</span>
+                <span class="text-muted text-xs uppercase tracking-wider">Detik</span>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+    //<![CDATA[
+    (function() {
+        // Atur durasi: 2 hari, 14 jam, 37 menit
+        const duration = (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (37 * 60 * 1000);
+        
+        // Simpan waktu akhir di browser agar tidak reset saat refresh
+        let deadline = localStorage.getItem('afna_deadline');
+        if (!deadline) {
+            deadline = new Date().getTime() + duration;
+            localStorage.setItem('afna_deadline', deadline);
+        }
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            // Parse deadline to number just in case it's stored as string
+            const diff = parseInt(deadline) - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown-timer').innerHTML = "<span class='text-gold font-bold'>PROMO BERAKHIR</span>";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days-val').innerText = d < 10 ? '0'+d : d;
+            document.getElementById('hours-val').innerText = h < 10 ? '0'+h : h;
+            document.getElementById('minutes-val').innerText = m < 10 ? '0'+m : m;
+            document.getElementById('seconds-val').innerText = s < 10 ? '0'+s : s;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    })();
+    //]]>
+    </script>
+</section>
+
+    <!-- PRICING SECTION -->
+    <section id="harga" class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Investasi Website Anda
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="reveal service-card rounded-2xl p-8 md:p-10 text-center">
+            <p class="text-gold text-sm uppercase tracking-widest mb-4">Penawaran Khusus</p>
+            
+            <div class="mb-6">
+                <span class="price-strike text-muted text-xl">Rp 250.000</span>
+            </div>
+            
+            <div class="mb-6">
+                <span class="text-5xl md:text-6xl font-bold text-fg">Rp 99.000</span>
+            </div>
+            
+            <p class="text-muted mb-8">Sudah termasuk desain, development, dan revisi</p>
+            
+            <div class="gold-line w-full mb-8"></div>
+            
+            <div class="text-left space-y-3 mb-8">
+                <p class="text-fg font-medium">Yang Anda dapatkan:</p>
+                <ul class="space-y-2 text-muted">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        1 halaman website penuh
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Desain responsif (mobile dan desktop)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Revisi hingga 3x
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Integrasi WhatsApp/Email
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Konsultasi 7 hari pasca project
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="#final-cta" 
+                   class="btn-primary inline-block w-full py-4 rounded-lg text-lg tracking-wide">
+                  Daftar Sekarang
+            </a>
+            <p class="text-muted text-sm mt-3">
+                Respons maksimal 1x24 jam via WhatsApp
+            </p>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="py-8">
+        <div class="reveal guarantee-badge rounded-xl p-6 text-center">
+            <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <h3 class="text-fg font-semibold text-lg mb-2">Garansi Kepuasan</h3>
+            <p class="text-muted leading-relaxed">
+                Jika hasil akhir tidak sesuai brief yang disepakati, kami akan melakukan perbaikan tanpa biaya tambahan hingga sesuai.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-16">
+        <div class="reveal text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
+                Pertanyaan Umum
+            </h2>
+            <div class="gold-line w-16 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-0">
+            <div class="reveal faq-item py-5">
+                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
+                    <span>Berapa lama proses pembuatan website?</span>
+                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer text-muted leading-relaxed">
+                    <p class="pt-3">Proses pembuatan membutuhkan 3-5 hari kerja tergantung kompleksitas. Untuk landing page sederhana, bisa selesai dalam 2-3 hari.</p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-1 faq-item py-5">
+                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
+                    <span>Apakah bisa menggunakan domain sendiri?</span>
+                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer text-muted leading-relaxed">
+                    <p class="pt-3">Ya, Anda bisa menggunakan domain sendiri. Biaya tambahan akan diinformasikan di awal sesuai kebutuhan konfigurasi.</p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-2 faq-item py-5">
+                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
+                    <span>Bagaimana sistem pembayarannya?</span>
+                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer text-muted leading-relaxed">
+                    <p class="pt-3">Pembayaran dilakukan 50% di awal sebagai DP, dan 50% sisanya setelah website selesai dan disetujui. Transfer via bank lokal.</p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-3 faq-item py-5">
+                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
+                    <span>Apakah ada biaya bulanan?</span>
+                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer text-muted leading-relaxed">
+                    <p class="pt-3">Tidak ada biaya bulanan untuk paket ini. Website akan dihosting di server kami. Jika ingin hosting sendiri, kami bantu migrasi.</p>
+                </div>
+            </div>
+            
+            <div class="reveal reveal-delay-4 faq-item py-5">
+                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
+                    <span>Apakah website bisa diedit sendiri?</span>
+                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer text-muted leading-relaxed">
+                    <p class="pt-3">Untuk perubahan konten sederhana, kami sediakan panduan editing. Untuk perubahan desain struktural, tim kami siap membantu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="final-cta" class="py-16">
+        <div class="reveal text-center">
+            <h2 class="font-display text-3xl md:text-4xl text-fg mb-6">
+                Siap Tampil Lebih Profesional?
+            </h2>
+            <p class="text-muted text-lg mb-8 max-w-md mx-auto">
+                Hubungi kami sekarang untuk konsultasi gratis. Kami bantu wujudkan website impian Anda.
+            </p>
+            
+            <!-- TOMBOL DENGAN PIXEL ADD TO CART -->
+            <a href="https://wa.me/6283899139307?text=Halo,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website" 
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="fbq('track', 'AddToCart', {content_name: 'Jasa Website Profesional', content_category: 'Layanan', value: 99000, currency: 'IDR'});"
+               class="btn-primary inline-block px-12 py-4 rounded-lg text-lg tracking-wide">
+                Hubungi via WhatsApp
+            </a>
+            <p class="text-muted text-sm mt-3">
+                Konsultasi gratis, tanpa komitmen
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-border">
+        <div class="text-center">
+            <p class="text-muted text-sm mb-2">Jasa Pembuatan Website Profesional</p>
+            <p class="text-muted/50 text-xs">Hak cipta dilindungi. Semua merek dagang adalah milik masing-masing pemiliknya.</p>
+        </div>
+    </footer>
+    
+</main>
+
+<!-- JAVASCRIPT -->
+<script>
+//<![CDATA[
+    // Scroll Reveal Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        var reveals = document.querySelectorAll('.reveal');
+        
+        var observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        reveals.forEach(function(reveal) {
+            observer.observe(reveal);
+        });
+    });
+    
+    // FAQ Accordion
+    document.addEventListener('DOMContentLoaded', function() {
+        var faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(function(question) {
+            question.addEventListener('click', function() {
+                var answer = this.nextElementSibling;
+                var icon = this.querySelector('.faq-icon');
+                var isOpen = answer.classList.contains('open');
+                
+                // Close all
+                document.querySelectorAll('.faq-answer').forEach(function(a) {
+                    a.classList.remove('open');
+                });
+                document.querySelectorAll('.faq-icon').forEach(function(i) {
+                    i.classList.remove('rotate');
+                });
+                document.querySelectorAll('.faq-question').forEach(function(q) {
+                    q.setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    icon.classList.add('rotate');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    });
+    
+    // Smooth scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+//]]>
+</script>
