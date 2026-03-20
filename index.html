@@ -1,837 +1,1046 @@
-<!-- JASA LANDING PAGE - BLOGGER COMPATIBLE VERSION -->
-<!-- Mulai dari sini -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfnawebAI - Buat Website Profesional dalam 60 Detik</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3732077753708528');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=3732077753708528&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 
-<!-- META PIXEL CODE (VIEW CONTENT) -->
-<!-- Ganti YOUR_PIXEL_ID dengan ID Pixel Facebook Anda -->
-<script>
-//<![CDATA[
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f.fbq._fbq)f.fbq._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '3732077753708528'); 
-  fbq('track', 'PageView');
-  fbq('track', 'ViewContent', {
-    content_name: 'Jasa Landing Page Profesional',
-    content_category: 'Layanan Website',
-    value: 99000,
-    currency: 'IDR'
-  });
-//]]>
-</script>
-<!-- END META PIXEL CODE -->
-
-<!-- PANGGIL TAILWIND CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-//<![CDATA[
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    bg: '#08080c',
-                    fg: '#fafaf9',
-                    muted: '#a8a29e',
-                    accent: '#d97706',
-                    gold: '#fbbf24',
-                    card: 'rgba(251, 191, 36, 0.03)',
-                    border: 'rgba(251, 191, 36, 0.15)'
-                },
-                fontFamily: {
-                    display: ['DM Serif Display', 'serif'],
-                    body: ['Plus Jakarta Sans', 'sans-serif']
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        violet: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
                 }
             }
         }
-    }
-//]]>
-</script>
-
-<!-- CUSTOM CSS & FONTS -->
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-
-    :root {
-        --bg: #08080c;
-        --fg: #fafaf9;
-        --muted: #a8a29e;
-        --accent: #d97706;
-        --gold: #fbbf24;
-    }
-    
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background-color: var(--bg);
-        color: var(--fg);
-    }
-    
-    .font-display {
-        font-family: 'DM Serif Display', serif;
-    }
-    
-    .bg-pattern {
-        background-image: 
-            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251, 191, 36, 0.08) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 40% at 80% 100%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
-    }
-    
-    .noise-overlay::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.03;
-        pointer-events: none;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        z-index: 1000;
-    }
-    
-    .gold-line {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    
-    .service-card {
-        background: linear-gradient(135deg, rgba(251, 191, 36, 0.04) 0%, rgba(251, 191, 36, 0.01) 100%);
-        border: 1px solid rgba(251, 191, 36, 0.1);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .service-card:hover {
-        border-color: rgba(251, 191, 36, 0.3);
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px -15px rgba(251, 191, 36, 0.15);
-    }
-    
-    .btn-primary {
-        background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%);
-        color: var(--bg);
-        font-weight: 600;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .btn-primary::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-        transition: left 0.5s ease;
-    }
-    
-    .btn-primary:hover::before {
-        left: 100%;
-    }
-    
-    .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px -5px rgba(251, 191, 36, 0.4);
-    }
-    
-    .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    
-    .price-strike {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .price-strike::after {
-        content: '';
-        position: absolute;
-        left: -5%;
-        top: 50%;
-        width: 110%;
-        height: 2px;
-        background: var(--accent);
-        transform: rotate(-8deg);
-    }
-    
-    .particle {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: var(--gold);
-        border-radius: 50%;
-        opacity: 0.3;
-        animation: float 8s infinite ease-in-out;
-    }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
-        50% { transform: translateY(-30px) translateX(15px); opacity: 0.6; }
-    }
-    
-    .countdown-box {
-        background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(217, 119, 6, 0.05) 100%);
-        border: 1px solid rgba(217, 119, 6, 0.3);
-    }
-    
-    .testimonial-card {
-        background: linear-gradient(135deg, rgba(251, 191, 36, 0.03) 0%, transparent 100%);
-        border-left: 2px solid var(--gold);
-    }
-    
-    .faq-item {
-        border-bottom: 1px solid rgba(251, 191, 36, 0.1);
-    }
-    
-    .faq-question {
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    
-    .faq-question:hover {
-        color: var(--gold);
-    }
-    
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease, padding 0.4s ease;
-    }
-    
-    .faq-answer.open {
-        max-height: 300px;
-    }
-    
-    .faq-icon {
-        transition: transform 0.3s ease;
-    }
-    
-    .faq-icon.rotate {
-        transform: rotate(180deg);
-    }
-    
-    .guarantee-badge {
-        background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
-        border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-    
-    @media (prefers-reduced-motion: reduce) {
-        .reveal {
-            opacity: 1;
-            transform: none;
-            transition: none;
-        }
-        .particle {
-            animation: none;
-        }
-        .btn-primary::before {
-            display: none;
-        }
-    }
-    
-    button:focus-visible,
-    a:focus-visible {
-        outline: 2px solid var(--gold);
-        outline-offset: 2px;
-    }
-</style>
-
-<!-- STRUKTUR HTML UTAMA -->
-<main class="relative max-w-2xl mx-auto px-5 py-8 bg-pattern noise-overlay">
-    
-    <!-- Floating Particles -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="top: 60%; left: 85%; animation-delay: 2s;"></div>
-        <div class="particle" style="top: 80%; left: 20%; animation-delay: 4s;"></div>
-        <div class="particle" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
-        <div class="particle" style="top: 50%; left: 40%; animation-delay: 3s;"></div>
-    </div>
-
-    <!-- HERO SECTION -->
-    <section class="min-h-[85vh] flex flex-col justify-center py-16">
-        <div class="text-center">
-            <p class="reveal text-muted text-sm tracking-[0.2em] uppercase mb-6 font-medium">Layanan Website Profesional</p>
-            
-            <h1 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-fg mb-6">
-                Bisnis Anda Tampil<br/>
-                <span class="text-gold">Lebih Kredibel</span><br/>
-                dalam 3-5 Hari
-            </h1>
-            
-            <p class="reveal reveal-delay-2 text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto">
-                Website profesional untuk UMKM, personal branding, dan kebutuhan digital lainnya. Tanpa ribet, tanpa skill teknis.
-            </p>
-            
-            <div class="reveal reveal-delay-3 gold-line w-24 mx-auto mb-8"></div>
-            
-            <a href="#harga" class="reveal reveal-delay-4 btn-primary inline-block px-10 py-4 rounded-lg text-lg tracking-wide">
-                Lihat Penawaran Spesial
-            </a>
-            <p class="reveal reveal-delay-4 text-muted text-sm mt-3">Kuota terbatas untuk bulan ini</p>
-        </div>
-    </section>
-
-    <!-- STOP SECTION -->
-    <section class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Apakah Ini Yang Anda Rasakan?
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="space-y-4">
-            <div class="reveal service-card rounded-xl p-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-gold text-xl mt-1">01</span>
-                    <p class="text-fg leading-relaxed">
-                        Punya bisnis yang sudah berjalan, tapi masih mengandalkan media sosial saja sebagai identitas digital.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-1 service-card rounded-xl p-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-gold text-xl mt-1">02</span>
-                    <p class="text-fg leading-relaxed">
-                        Ingin terlihat lebih profesional di mata klien, tapi bingung harus mulai dari mana.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-2 service-card rounded-xl p-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-gold text-xl mt-1">03</span>
-                    <p class="text-fg leading-relaxed">
-                        Tertarik membuat website, tapi terhalang biaya yang dianggap terlalu tinggi.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-3 service-card rounded-xl p-6">
-                <div class="flex items-start gap-4">
-                    <span class="text-gold text-xl mt-1">04</span>
-                    <p class="text-fg leading-relaxed">
-                        Pernah order website, tapi hasilnya mengecewakan dan tidak sesuai ekspektasi.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <p class="reveal text-center text-muted mt-8 text-lg italic">
-            Jika jawabannya "YA", Anda berada di tempat yang tepat.
-        </p>
-    </section>
-
-    <!-- LOOK SECTION -->
-    <section class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Solusi Untuk Kebutuhan<br/>Digital Anda
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="space-y-6">
-            <div class="reveal service-card rounded-xl p-8">
-                <h3 class="text-gold font-semibold text-lg mb-3">Landing Page Penjualan</h3>
-                <p class="text-fg leading-relaxed mb-4">
-                    Halaman khusus untuk menampilkan produk atau jasa Anda dengan fokus pada konversi. Cocok untuk kampanye iklan dan promosi.
-                </p>
-                <ul class="space-y-2 text-muted">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Desain responsif untuk semua perangkat
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Terintegrasi dengan WhatsApp
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Revisi hingga maksimal 3x
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="reveal reveal-delay-1 service-card rounded-xl p-8">
-                <h3 class="text-gold font-semibold text-lg mb-3">Company Profile</h3>
-                <p class="text-fg leading-relaxed mb-4">
-                    Website perusahaan yang menampilkan profil bisnis secara profesional. Meningkatkan kepercayaan calon klien dan partner bisnis.
-                </p>
-                <ul class="space-y-2 text-muted">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Halaman lengkap (Tentang, Layanan, Kontak)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Integrasi Google Maps
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Form kontak langsung ke email
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="reveal reveal-delay-2 service-card rounded-xl p-8">
-                <h3 class="text-gold font-semibold text-lg mb-3">Biolink dan Undangan Digital</h3>
-                <p class="text-fg leading-relaxed mb-4">
-                    Halaman link untuk Instagram/TikTok yang elegan, atau undangan pernikahan yang bisa dibagikan secara digital.
-                </p>
-                <ul class="space-y-2 text-muted">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Desain custom sesuai branding
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Fitur RSVP untuk undangan
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Musik latar opsional
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACT SECTION -->
-    <section class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Mengapa Memilih Kami?
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="space-y-6">
-            <div class="reveal service-card rounded-xl p-6">
-                <h3 class="text-gold font-semibold mb-2">Proses Cepat dan Terstruktur</h3>
-                <p class="text-muted leading-relaxed">
-                    Dari briefing hingga website siap digunakan dalam 3-5 hari kerja. Anda mendapat update progress setiap tahapan.
-                </p>
-            </div>
-            
-            <div class="reveal reveal-delay-1 service-card rounded-xl p-6">
-                <h3 class="text-gold font-semibold mb-2">Harga Transparan</h3>
-                <p class="text-muted leading-relaxed">
-                    Biaya yang tercantum sudah mencakup desain, development, dan revisi. Tidak ada biaya tersembunyi.
-                </p>
-            </div>
-            
-            <div class="reveal reveal-delay-2 service-card rounded-xl p-6">
-                <h3 class="text-gold font-semibold mb-2">Domain Fleksibel</h3>
-                <p class="text-muted leading-relaxed">
-                    Gunakan domain sub kami atau domain kustom Anda. Biaya tambahan domain kustom akan diinformasikan di awal.
-                </p>
-            </div>
-            
-            <div class="reveal reveal-delay-3 service-card rounded-xl p-6">
-                <h3 class="text-gold font-semibold mb-2">Dukungan Pasca Project</h3>
-                <p class="text-muted leading-relaxed">
-                    Konsultasi gratis selama 7 hari setelah website jadi. Kami bantu jika ada yang perlu disesuaikan.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIAL SECTION -->
-    <section class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Apa Kata Mereka
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="space-y-6">
-            <div class="reveal testimonial-card rounded-xl p-6 bg-card">
-                <p class="text-fg leading-relaxed mb-4 italic">
-                    "Prosesnya cepat dan hasilnya memuaskan. Website company profile kami jadi lebih profesional. Tim responsif saat ada revisi."
-                </p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
-                        R
-                    </div>
-                    <div>
-                        <p class="text-fg font-medium">Rizky Permadi</p>
-                        <p class="text-muted text-sm">Owner, Toko Elektronik</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-1 testimonial-card rounded-xl p-6 bg-card">
-                <p class="text-fg leading-relaxed mb-4 italic">
-                    "Awalnya ragu karena harga terjangkau, tapi hasil landing page-nya kualitasnya bagus. Desainnya modern dan fast loading."
-                </p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
-                        S
-                    </div>
-                    <div>
-                        <p class="text-fg font-medium">Sinta Dewi</p>
-                        <p class="text-muted text-sm">Founder, Online Shop</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-2 testimonial-card rounded-xl p-6 bg-card">
-                <p class="text-fg leading-relaxed mb-4 italic">
-                    "Undangan digital untuk pernikahan saya sangat cantik. Teman-teman banyak yang memuji. Terima kasih banyak!"
-                </p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center text-bg font-semibold">
-                        A
-                    </div>
-                    <div>
-                        <p class="text-fg font-medium">Anisa Rahma</p>
-                        <p class="text-muted text-sm">Customer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCARCITY SECTION -->
-    <section class="py-8">
-    <div class="reveal countdown-box rounded-xl p-6 text-center" style="border: 1px solid rgba(181, 148, 16, 0.3);">
-        <p class="text-gold font-semibold mb-2">Penawaran Terbatas</p>
-        <p class="text-muted text-sm mb-4">Harga promo berlaku untuk 10 pemesan berikutnya</p>
-        
-        <div class="flex justify-center gap-4" id="countdown-timer">
-            <div class="text-center">
-                <span class="block text-3xl font-bold text-fg" id="days-val">00</span>
-                <span class="text-muted text-xs uppercase tracking-wider">Hari</span>
-            </div>
-            <span class="text-2xl text-gold">:</span>
-            <div class="text-center">
-                <span class="block text-3xl font-bold text-fg" id="hours-val">00</span>
-                <span class="text-muted text-xs uppercase tracking-wider">Jam</span>
-            </div>
-            <span class="text-2xl text-gold">:</span>
-            <div class="text-center">
-                <span class="block text-3xl font-bold text-fg" id="minutes-val">00</span>
-                <span class="text-muted text-xs uppercase tracking-wider">Menit</span>
-            </div>
-            <span class="text-2xl text-gold">:</span>
-            <div class="text-center">
-                <span class="block text-3xl font-bold text-fg" id="seconds-val">00</span>
-                <span class="text-muted text-xs uppercase tracking-wider">Detik</span>
-            </div>
-        </div>
-    </div>
-
-    <script type='text/javascript'>
-    //<![CDATA[
-    (function() {
-        // Atur durasi: 2 hari, 14 jam, 37 menit
-        const duration = (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (37 * 60 * 1000);
-        
-        // Simpan waktu akhir di browser agar tidak reset saat refresh
-        let deadline = localStorage.getItem('afna_deadline');
-        if (!deadline) {
-            deadline = new Date().getTime() + duration;
-            localStorage.setItem('afna_deadline', deadline);
-        }
-
-        function updateTimer() {
-            const now = new Date().getTime();
-            // Parse deadline to number just in case it's stored as string
-            const diff = parseInt(deadline) - now;
-
-            if (diff <= 0) {
-                document.getElementById('countdown-timer').innerHTML = "<span class='text-gold font-bold'>PROMO BERAKHIR</span>";
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('days-val').innerText = d < 10 ? '0'+d : d;
-            document.getElementById('hours-val').innerText = h < 10 ? '0'+h : h;
-            document.getElementById('minutes-val').innerText = m < 10 ? '0'+m : m;
-            document.getElementById('seconds-val').innerText = s < 10 ? '0'+s : s;
-        }
-
-        setInterval(updateTimer, 1000);
-        updateTimer();
-    })();
-    //]]>
     </script>
-</section>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --fg: #1a1a2e;
+            --muted: #6b7280;
+            --accent: #7c3aed;
+            --accent-light: #a78bfa;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --gradient-start: #8b5cf6;
+            --gradient-end: #6d28d9;
+        }
 
-    <!-- PRICING SECTION -->
-    <section id="harga" class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Investasi Website Anda
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="reveal service-card rounded-2xl p-8 md:p-10 text-center">
-            <p class="text-gold text-sm uppercase tracking-widest mb-4">Penawaran Khusus</p>
-            
-            <div class="mb-6">
-                <span class="price-strike text-muted text-xl">Rp 250.000</span>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-bg {
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(109, 40, 217, 0.08), transparent),
+                linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #a78bfa, #7c3aed);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            bottom: 20%;
+            left: -150px;
+            animation-delay: -7s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .feature-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .price-strike {
+            position: relative;
+        }
+
+        .price-strike::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 3px;
+            background: #ef4444;
+            transform: rotate(-8deg);
+            animation: strikeIn 0.6s ease forwards;
+        }
+
+        @keyframes strikeIn {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        }
+
+        .guarantee-badge {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .float-slow {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .orb, .float-slow, .guarantee-badge {
+                animation: none;
+            }
+            .btn-primary::before {
+                display: none;
+            }
+        }
+
+        button:focus-visible, a:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-light);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-bg relative min-h-screen overflow-hidden">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-6 pt-20 pb-16 text-center">
+            <div class="reveal inline-flex items-center gap-2 bg-violet-100 text-violet-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                <span class="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></span>
+                Promo Terbatas - Hemat Hingga 80%
             </div>
-            
-            <div class="mb-6">
-                <span class="text-5xl md:text-6xl font-bold text-fg">Rp 99.000</span>
-            </div>
-            
-            <p class="text-muted mb-8">Sudah termasuk desain, development, dan revisi</p>
-            
-            <div class="gold-line w-full mb-8"></div>
-            
-            <div class="text-left space-y-3 mb-8">
-                <p class="text-fg font-medium">Yang Anda dapatkan:</p>
-                <ul class="space-y-2 text-muted">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        1 halaman website penuh
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Desain responsif (mobile dan desktop)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Revisi hingga 3x
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Integrasi WhatsApp/Email
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                        Konsultasi 7 hari pasca project
-                    </li>
-                </ul>
-            </div>
-            
-            <a href="#final-cta" 
-                   class="btn-primary inline-block w-full py-4 rounded-lg text-lg tracking-wide">
-                  Daftar Sekarang
-            </a>
-            <p class="text-muted text-sm mt-3">
-                Respons maksimal 1x24 jam via WhatsApp
+
+            <h1 class="reveal reveal-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Buat Website Profesional
+                <span class="gradient-text block mt-2">Tanpa Coding, Tanpa Desainer</span>
+            </h1>
+
+            <p class="reveal reveal-delay-2 text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                Cukup isi form, klik Generate, dan website Anda siap dalam hitungan detik. 
+                Landing page, company profile, undangan digital — semua bisa.
             </p>
+
+            <div class="reveal reveal-delay-3 space-y-3">
+                <a href="https://afnastore.myr.id/pl/AfnawebAI" 
+                   onclick="fbq('track', 'AddToCart');" 
+                   class="btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold">
+                    <span>Coba Sekarang - Mulai Rp 97.000</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <p class="text-sm text-gray-500">
+                    Akses selamanya. Tidak ada biaya bulanan.
+                </p>
+            </div>
+
+            <div class="reveal reveal-delay-4 mt-16 relative">
+                <div class="bg-white rounded-3xl shadow-2xl shadow-violet-500/10 p-4 border border-gray-100">
+                    <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-8 sm:p-12">
+                        <div class="flex items-center justify-center gap-4 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-4 bg-violet-200 rounded-full w-3/4 mx-auto"></div>
+                            <div class="h-4 bg-violet-100 rounded-full w-1/2 mx-auto"></div>
+                            <div class="grid grid-cols-3 gap-4 mt-8">
+                                <div class="h-20 bg-white rounded-xl shadow-sm"></div>
+                                <div class="h-20 bg-white rounded-xl shadow-sm"></div>
+                                <div class="h-20 bg-white rounded-xl shadow-sm"></div>
+                            </div>
+                            <div class="h-32 bg-white rounded-xl shadow-sm mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -top-4 -right-4 float-slow bg-white rounded-2xl shadow-lg p-4 border border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-sm font-semibold">Website Siap!</p>
+                            <p class="text-xs text-gray-500">Dalam 60 detik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- GUARANTEE SECTION -->
-    <section class="py-8">
-        <div class="reveal guarantee-badge rounded-xl p-6 text-center">
-            <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-            <h3 class="text-fg font-semibold text-lg mb-2">Garansi Kepuasan</h3>
-            <p class="text-muted leading-relaxed">
-                Jika hasil akhir tidak sesuai brief yang disepakati, kami akan melakukan perbaikan tanpa biaya tambahan hingga sesuai.
-            </p>
-        </div>
-    </section>
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Ini yang Sering Terjadi...
+                </h2>
+            </div>
 
-    <!-- FAQ SECTION -->
-    <section class="py-16">
-        <div class="reveal text-center mb-12">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-4">
-                Pertanyaan Umum
-            </h2>
-            <div class="gold-line w-16 mx-auto"></div>
-        </div>
-        
-        <div class="space-y-0">
-            <div class="reveal faq-item py-5">
-                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
-                    <span>Berapa lama proses pembuatan website?</span>
-                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer text-muted leading-relaxed">
-                    <p class="pt-3">Proses pembuatan membutuhkan 3-5 hari kerja tergantung kompleksitas. Untuk landing page sederhana, bisa selesai dalam 2-3 hari.</p>
+            <div class="space-y-6">
+                <div class="reveal reveal-delay-1 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-1">Bayar jutaan rupiah untuk jasa website</h3>
+                        <p class="text-gray-600">Padahal yang dibutuhkan cukup sederhana — landing page atau company profile dasar.</p>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-1">Nunggu berhari-hari bahkan berminggu</h3>
+                        <p class="text-gray-600">Balinpo balik revisi, komunikasi memakan waktu, sementara bisnis harus jalan.</p>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-3 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-1">Tidak bisa edit sendiri</h3>
+                        <p class="text-gray-600">Setiap mau ubah teks atau gambar, harus hubungi developer lagi. Ribet dan bisa jadi berbayar.</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="reveal reveal-delay-1 faq-item py-5">
-                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
-                    <span>Apakah bisa menggunakan domain sendiri?</span>
-                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer text-muted leading-relaxed">
-                    <p class="pt-3">Ya, Anda bisa menggunakan domain sendiri. Biaya tambahan akan diinformasikan di awal sesuai kebutuhan konfigurasi.</p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-2 faq-item py-5">
-                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
-                    <span>Bagaimana sistem pembayarannya?</span>
-                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer text-muted leading-relaxed">
-                    <p class="pt-3">Pembayaran dilakukan 50% di awal sebagai DP, dan 50% sisanya setelah website selesai dan disetujui. Transfer via bank lokal.</p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-3 faq-item py-5">
-                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
-                    <span>Apakah ada biaya bulanan?</span>
-                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer text-muted leading-relaxed">
-                    <p class="pt-3">Tidak ada biaya bulanan untuk paket ini. Website akan dihosting di server kami. Jika ingin hosting sendiri, kami bantu migrasi.</p>
-                </div>
-            </div>
-            
-            <div class="reveal reveal-delay-4 faq-item py-5">
-                <button class="faq-question w-full flex justify-between items-center text-left text-fg font-medium" aria-expanded="false">
-                    <span>Apakah website bisa diedit sendiri?</span>
-                    <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer text-muted leading-relaxed">
-                    <p class="pt-3">Untuk perubahan konten sederhana, kami sediakan panduan editing. Untuk perubahan desain struktural, tim kami siap membantu.</p>
-                </div>
+
+            <div class="reveal mt-12 text-center">
+                <p class="text-xl text-gray-700 font-medium">
+                    Bayangkan kalau Anda bisa membuat website sendiri...
+                    <span class="gradient-text font-bold">dalam waktu seseduh kopi.</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section id="final-cta" class="py-16">
-        <div class="reveal text-center">
-            <h2 class="font-display text-3xl md:text-4xl text-fg mb-6">
-                Siap Tampil Lebih Profesional?
-            </h2>
-            <p class="text-muted text-lg mb-8 max-w-md mx-auto">
-                Hubungi kami sekarang untuk konsultasi gratis. Kami bantu wujudkan website impian Anda.
-            </p>
-            
-            <!-- TOMBOL DENGAN PIXEL ADD TO CART -->
-            <a href="https://wa.me/6283899139307?text=Halo,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website" 
-               target="_blank"
-               rel="noopener noreferrer"
-               onclick="fbq('track', 'AddToCart', {content_name: 'Jasa Website Profesional', content_category: 'Layanan', value: 99000, currency: 'IDR'});"
-               class="btn-primary inline-block px-12 py-4 rounded-lg text-lg tracking-wide">
-                Hubungi via WhatsApp
-            </a>
-            <p class="text-muted text-sm mt-3">
-                Konsultasi gratis, tanpa komitmen
-            </p>
+    <!-- Solution Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-violet-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <p class="text-violet-600 font-semibold mb-4">SOLUSI UNTUK ANDA</p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Kenalkan, AfnawebAI
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Tools berbasis AI yang membuat website profesional dari form isian sederhana.
+                </p>
+            </div>
+
+            <div class="reveal bg-white rounded-3xl shadow-xl shadow-violet-500/5 p-8 sm:p-10 border border-violet-100">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
+                            <span class="text-lg">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Isi form dengan detail usaha Anda</h3>
+                            <p class="text-gray-600">Nama usaha, deskripsi, kontak, dan beberapa informasi pendukung.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
+                            <span class="text-lg">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Klik Generate</h3>
+                            <p class="text-gray-600">AI akan membuatkan website yang sesuai dengan kebutuhan Anda.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
+                            <span class="text-lg">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Edit via chatbot jika perlu</h3>
+                            <p class="text-gray-600">Ubah warna, teks, tambah section — cukup ketik perintahnya.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
+                            <span class="text-lg">4</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Download dan upload ke hosting</h3>
+                            <p class="text-gray-600">File HTML siap pakai, bisa di-host di mana saja.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+                    <p class="text-2xl font-display font-bold gradient-text">Total waktu: Kurang dari 60 detik</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-8 border-t border-border">
-        <div class="text-center">
-            <p class="text-muted text-sm mb-2">Jasa Pembuatan Website Profesional</p>
-            <p class="text-muted/50 text-xs">Hak cipta dilindungi. Semua merek dagang adalah milik masing-masing pemiliknya.</p>
+    <!-- Features Section -->
+    <section class="py-20 bg-violet-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Fitur yang Membuat Hidup Lebih Mudah
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="reveal reveal-delay-1 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">Generate dalam 60 Detik</h3>
+                            <p class="text-gray-600">Dari form kosong jadi website lengkap — landing page, company profile, undangan digital, bio link, mini shop, dan lainnya.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">9 Jenis Website Tersedia</h3>
+                            <p class="text-gray-600">Pilih template yang sesuai kebutuhan, semuanya bisa dikustomisasi penuh via chatbot AI.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-3 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">Edit via Chatbot AI</h3>
+                            <p class="text-gray-600">Mau ubah warna, ganti teks, atau tambah section? Cukup ketik perintahnya — tidak perlu coding sama sekali.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-4 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">Otomatis Responsive</h3>
+                            <p class="text-gray-600">Website tampil sempurna di semua perangkat — HP, tablet, dan desktop. Tidak perlu setting tambahan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-2">Download HTML Langsung</h3>
+                            <p class="text-gray-600">File hasil generate bisa langsung di-upload ke hosting manapun. Tidak terkunci di platform tertentu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Cocok untuk Siapa?
+                </h2>
+            </div>
+
+            <div class="reveal grid gap-4">
+                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
+                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <p class="font-medium">Freelancer yang butuh portfolio atau landing page klien dengan cepat</p>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
+                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <p class="font-medium">Pemilik UMKM yang ingin punya website tanpa biaya mahal</p>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
+                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <p class="font-medium">Online seller yang butuh bio link atau mini shop profesional</p>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
+                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <p class="font-medium">Event organizer yang butuh undangan digital atau landing event</p>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
+                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <p class="font-medium">Siapa saja yang butuh website cepat tanpa mau pusing coding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gradient-to-b from-white to-violet-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Kata Mereka yang Sudah Mencoba
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="reveal reveal-delay-1 testimonial-card rounded-2xl p-6 sm:p-8">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Gak nyangka bisa bikin website sendiri dalam hitungan menit. Padahal saya gaptek banget soal coding. Tinggal isi form, jadi deh!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">RA</div>
+                        <div>
+                            <p class="font-semibold">Ratna A.</p>
+                            <p class="text-sm text-gray-500">Pemilik UMKM Kuliner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2 testimonial-card rounded-2xl p-6 sm:p-8">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Sebagai freelancer, ini sangat membantu kerjaan saya. Client minta revisi? Tinggal ketik ke chatbot, beres. Nggak perlu buka code editor lagi."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">BH</div>
+                        <div>
+                            <p class="font-semibold">Budi H.</p>
+                            <p class="text-sm text-gray-500">Freelance Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-3 testimonial-card rounded-2xl p-6 sm:p-8">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Buat undangan pernikahan digital pakai AfnawebAI, hasilnya elegan banget. Tamu-tamu sampai kagum dan nanya bikinnya pakai apa!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">SP</div>
+                        <div>
+                            <p class="font-semibold">Sari P.</p>
+                            <p class="text-sm text-gray-500">Pengguna Personal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity Section -->
+    <section class="py-16 bg-gradient-to-r from-violet-600 to-purple-700">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="reveal">
+                <p class="text-violet-200 font-medium mb-2">PROMO TERBATAS</p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Harga Khusus Akan Berakhir
+                </h2>
+                
+                <div class="flex justify-center gap-3 sm:gap-4 mb-8" id="countdown">
+                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
+                        <div class="text-2xl sm:text-3xl font-bold text-white" id="hours">23</div>
+                        <div class="text-xs text-violet-200">Jam</div>
+                    </div>
+                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
+                        <div class="text-2xl sm:text-3xl font-bold text-white" id="minutes">59</div>
+                        <div class="text-xs text-violet-200">Menit</div>
+                    </div>
+                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
+                        <div class="text-2xl sm:text-3xl font-bold text-white" id="seconds">59</div>
+                        <div class="text-xs text-violet-200">Detik</div>
+                    </div>
+                </div>
+
+                <p class="text-violet-100">
+                    Setelah timer habis, harga kembali ke Rp 499.000
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-violet-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-12">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+                    Investasi Sekali, Akses Selamanya
+                </h2>
+                <p class="text-gray-600">Tidak ada biaya bulanan. Tidak ada hidden fee.</p>
+            </div>
+
+            <div class="reveal bg-white rounded-3xl shadow-2xl shadow-violet-500/10 overflow-hidden border border-violet-100">
+                <div class="bg-gradient-to-r from-violet-600 to-purple-700 py-3 text-center">
+                    <span class="text-white font-semibold text-sm">PENAWARAN TERBAIK</span>
+                </div>
+
+                <div class="p-8 sm:p-10">
+                    <div class="text-center mb-8">
+                        <div class="flex items-center justify-center gap-4 mb-2">
+                            <span class="text-xl text-gray-400 line-through price-strike">Rp 499.000</span>
+                            <span class="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">HEMAT 80%</span>
+                        </div>
+                        <div class="font-display text-5xl sm:text-6xl font-bold gradient-text">
+                            Rp 97.000
+                        </div>
+                        <p class="text-gray-500 mt-2">Sekali bayar, akses selamanya</p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Akses ke 9 jenis template website</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Generate website unlimited</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Chatbot AI untuk editing</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Download HTML tanpa watermark</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Update fitur gratis selamanya</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Support via WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <a href="https://afnastore.myr.id/pl/AfnawebAI" 
+                       onclick="fbq('track', 'AddToCart');" 
+                       class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
+                        Beli Sekarang - Rp 97.000
+                    </a>
+                    <p class="text-center text-sm text-gray-500">
+                        Pembayaran aman via Midtrans. Akses instant setelah pembayaran.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal guarantee-badge bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 sm:p-10 border border-green-100 text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold mb-4">Garansi Kepuasan 7 Hari</h3>
+                <p class="text-gray-600 max-w-xl mx-auto">
+                    Jika dalam 7 hari Anda merasa AfnawebAI tidak sesuai ekspektasi, kami akan mengembalikan pembayaran Anda tanpa pertanyaan apapun. Cukup hubungi support kami.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-violet-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Pertanyaan yang Sering Diajukan
+                </h2>
+            </div>
+
+            <div class="reveal space-y-4">
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Apakah saya perlu skill coding untuk menggunakan AfnawebAI?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Tidak sama sekali. Cukup isi form dengan informasi usaha Anda, klik Generate, dan website siap digunakan. Untuk editing, cukup ketik perintah ke chatbot AI.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Website yang dihasilkan bisa di-host di mana saja?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Ya, hasil generate berupa file HTML murni yang bisa Anda upload ke hosting manapun — Netlify, Vercel, hosting sendiri, atau bahkan GitHub Pages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Apakah ada biaya bulanan atau tahunan?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Tidak ada. Bayar sekali Rp 97.000, akses selamanya. Termasuk update fitur ke depan tanpa biaya tambahan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Berapa kali saya bisa generate website?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Unlimited. Anda bisa membuat sebanyak apapun website yang dibutuhkan — untuk diri sendiri, klien, atau siapa pun.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Bagaimana cara klaim garansi?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Cukup hubungi support kami via WhatsApp dalam 7 hari setelah pembelian, dan kami akan memproses refund Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gradient-to-b from-violet-50 to-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="reveal">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+                    Siap Membuat Website dalam 60 Detik?
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+                    Bergabung dengan ribuan pengguna yang sudah merasakan kemudahan membuat website dengan AfnawebAI.
+                </p>
+
+                <div class="bg-white rounded-3xl shadow-xl shadow-violet-500/5 p-8 sm:p-10 border border-violet-100 max-w-md mx-auto">
+                    <div class="mb-6">
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <span class="text-gray-400 line-through">Rp 499.000</span>
+                        </div>
+                        <div class="font-display text-4xl font-bold gradient-text">
+                            Rp 97.000
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Akses selamanya</p>
+                    </div>
+
+                    <a href="https://afnastore.myr.id/pl/AfnawebAI" 
+                       onclick="fbq('track', 'AddToCart');" 
+                       class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
+                        Beli Sekarang
+                    </a>
+                    <p class="text-sm text-gray-500">
+                        Garansi 7 hari. Pembayaran aman via Midtrans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                AfnawebAI - Buat website profesional tanpa coding
+            </p>
+            <p class="text-gray-400 text-xs mt-2">
+                Dilindungi kebijakan privasi dan syarat ketentuan.
+            </p>
         </div>
     </footer>
-    
-</main>
 
-<!-- JAVASCRIPT -->
-<script>
-//<![CDATA[
-    // Scroll Reveal Animation
-    document.addEventListener('DOMContentLoaded', function() {
-        var reveals = document.querySelectorAll('.reveal');
-        
-        var observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+    <script>
+        // Initialize countdown end time
+        let countdownEndTime = null;
+
+        function initCountdown() {
+            const storedEndTime = sessionStorage.getItem('countdownEndTime');
+            if (storedEndTime) {
+                countdownEndTime = parseInt(storedEndTime, 10);
+            } else {
+                countdownEndTime = Date.now() + 24 * 60 * 60 * 1000;
+                sessionStorage.setItem('countdownEndTime', countdownEndTime.toString());
+            }
+        }
+
+        function updateCountdown() {
+            if (!countdownEndTime) return;
+
+            const now = Date.now();
+            let distance = countdownEndTime - now;
+
+            if (distance < 0) {
+                countdownEndTime = Date.now() + 24 * 60 * 60 * 1000;
+                sessionStorage.setItem('countdownEndTime', countdownEndTime.toString());
+                distance = 24 * 60 * 60 * 1000;
+            }
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Scroll reveal
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
-        }, observerOptions);
-        
-        reveals.forEach(function(reveal) {
-            observer.observe(reveal);
-        });
-    });
-    
-    // FAQ Accordion
-    document.addEventListener('DOMContentLoaded', function() {
-        var faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(function(question) {
-            question.addEventListener('click', function() {
-                var answer = this.nextElementSibling;
-                var icon = this.querySelector('.faq-icon');
-                var isOpen = answer.classList.contains('open');
+
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        // FAQ accordion
+        function initFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const toggle = item.querySelector('.faq-toggle');
                 
-                // Close all
-                document.querySelectorAll('.faq-answer').forEach(function(a) {
-                    a.classList.remove('open');
-                });
-                document.querySelectorAll('.faq-icon').forEach(function(i) {
-                    i.classList.remove('rotate');
-                });
-                document.querySelectorAll('.faq-question').forEach(function(q) {
-                    q.setAttribute('aria-expanded', 'false');
-                });
-                
-                // Toggle current
-                if (!isOpen) {
-                    answer.classList.add('open');
-                    icon.classList.add('rotate');
-                    this.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-    });
-    
-    // Smooth scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                toggle.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
                     });
-                }
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
             });
+        }
+
+        // Respect reduced motion
+        function checkReducedMotion() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelectorAll('.reveal').forEach(el => {
+                    el.classList.add('active');
+                });
+            }
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            initCountdown();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            initScrollReveal();
+            initFAQ();
+            checkReducedMotion();
         });
-    });
-//]]>
-</script>
+    </script>
+</body>
+</html>
