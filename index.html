@@ -200,22 +200,17 @@
         .float-slow { animation: floatSlow 6s ease-in-out infinite; }
         @keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-        /* Interactive Demo Cards */
         .demo-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
         .demo-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
         }
-        .demo-card img { transition: transform 0.4s ease; }
-        .demo-card:hover img { transform: scale(1.02); }
-
+        
         .generator-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
         .generator-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.2);
         }
-        .generator-card img { transition: transform 0.4s ease; }
-        .generator-card:hover img { transform: scale(1.01); }
 
         @media (prefers-reduced-motion: reduce) {
             .reveal { opacity: 1; transform: none; transition: none; }
@@ -252,7 +247,6 @@
             </p>
 
             <div class="reveal reveal-delay-3 space-y-3">
-                <!-- Tombol Hero: Scroll ke Pricing -->
                 <a href="#pricing" class="btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold">
                     <span>Lihat Penawaran Spesial</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -434,23 +428,25 @@
             </div>
 
             <div class="reveal space-y-8">
-                <a href="https://iili.io/qNP4sCx.png" target="_blank" rel="noopener" class="generator-card block bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
+                <!-- Foto Generator 1 -->
+                <div class="generator-card bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
                     <img 
-                        src="https://iili.io/qNP4sCx.png" 
-                        alt="AfnawebAI Generator Interface - Klik untuk memperbesar"
-                        class="w-full h-auto cursor-zoom-in"
+                        src="https://drive.google.com/uc?export=view&id=1pyUkW16GZ4G69fuxLggDDaXIOJM1EhXy" 
+                        alt="AfnawebAI Generator Interface"
+                        class="w-full h-auto"
                         loading="lazy"
                     >
-                </a>
+                </div>
 
-                <a href="https://iili.io/qNiqHdB.png" target="_blank" rel="noopener" class="generator-card block bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
+                <!-- Foto Generator 2 -->
+                <div class="generator-card bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
                     <img 
-                        src="https://iili.io/qNiqHdB.png" 
-                        alt="AfnawebAI Generator Form - Klik untuk memperbesar"
-                        class="w-full h-auto cursor-zoom-in"
+                        src="https://drive.google.com/uc?export=view&id=1OeQ6fVac9_XRHw5Y_SlzmCBRttbkvjEa" 
+                        alt="AfnawebAI Generator Form"
+                        class="w-full h-auto"
                         loading="lazy"
                     >
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -464,16 +460,16 @@
                     Demo Website yang Dihasilkan
                 </h2>
                 <p class="text-lg text-gray-600">
-                    Berikut contoh website nyata yang dibuat dengan AfnawebAI. Klik gambar untuk lihat demo.
+                    Berikut contoh website nyata yang dibuat dengan AfnawebAI
                 </p>
             </div>
 
             <div class="space-y-10">
                 <!-- Demo 1 -->
-                <a href="https://landing.afnaweb.my.id/" target="_blank" rel="noopener" class="reveal demo-card block bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
                         <img 
-                            src="https://iili.io/qNi7lol.png" 
+                            src="https://drive.google.com/uc?export=view&id=1ZkeGEuJu-e6QyPuylzrBWelBOH22mhOR" 
                             alt="Landing Page Demo"
                             class="w-full h-full object-cover"
                             loading="lazy"
@@ -485,20 +481,20 @@
                             <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full">Landing Page</span>
                         </div>
                         <p class="text-gray-600 mb-4">Cocok untuk promosi produk, jasa, atau kampanye marketing Anda.</p>
-                        <div class="inline-flex items-center gap-2 text-violet-600 font-semibold">
+                        <a href="https://landing.afnaweb.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                </div>
 
                 <!-- Demo 2 -->
-                <a href="https://afnawedding1.blogspot.com/" target="_blank" rel="noopener" class="reveal demo-card block bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
                         <img 
-                            src="https://iili.io/qNiXwbI.png" 
+                            src="https://drive.google.com/uc?export=view&id=19-C79xTM5aO4horh-IquZAZQklcr76D9" 
                             alt="Undangan Digital Demo"
                             class="w-full h-full object-cover"
                             loading="lazy"
@@ -510,20 +506,20 @@
                             <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-3 py-1 rounded-full">Undangan</span>
                         </div>
                         <p class="text-gray-600 mb-4">Undangan pernikahan digital yang elegan, bisa dibagikan via WhatsApp.</p>
-                        <div class="inline-flex items-center gap-2 text-violet-600 font-semibold">
+                        <a href="https://afnawedding1.blogspot.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                </div>
 
                 <!-- Demo 3 -->
-                <a href="https://www.afnaweb.my.id/" target="_blank" rel="noopener" class="reveal demo-card block bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
                         <img 
-                            src="https://iili.io/qNigq5F.png" 
+                            src="https://drive.google.com/uc?export=view&id=19KRvn4l7qnlWdUIsSt0l_DYgaMrwBHYo" 
                             alt="Company Profile Demo"
                             class="w-full h-full object-cover"
                             loading="lazy"
@@ -535,14 +531,14 @@
                             <span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">Company Profile</span>
                         </div>
                         <p class="text-gray-600 mb-4">Website profil bisnis yang profesional untuk meningkatkan kredibilitas usaha Anda.</p>
-                        <div class="inline-flex items-center gap-2 text-violet-600 font-semibold">
+                        <a href="https://www.afnaweb.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -852,7 +848,6 @@
                         </div>
                     </div>
 
-                    <!-- Tombol Pricing: Langsung Checkout -->
                     <a href="https://afnastore.myr.id/pl/AfnawebAI" 
                        onclick="fbq('track', 'AddToCart');" 
                        class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
@@ -978,7 +973,6 @@
                         <p class="text-sm text-gray-500 mt-1">Akses selamanya</p>
                     </div>
 
-                    <!-- Tombol Final CTA: Langsung Checkout -->
                     <a href="https://afnastore.myr.id/pl/AfnawebAI" 
                        onclick="fbq('track', 'AddToCart');" 
                        class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
