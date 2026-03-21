@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfnawebAI - Buat Website Profesional dalam 60 Detik</title>
+    <title>AfnawebAI - Buat Website Profesional dalam Beberapa Menit</title>
     
-    <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,11 +17,7 @@
         fbq('init', '3732077753708528');
         fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=3732077753708528&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3732077753708528&ev=PageView&noscript=1"/></noscript>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +33,9 @@
                     },
                     colors: {
                         violet: {
-                            50: '#f5f3ff',
-                            100: '#ede9fe',
-                            200: '#ddd6fe',
-                            300: '#c4b5fd',
-                            400: '#a78bfa',
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                            700: '#6d28d9',
-                            800: '#5b21b6',
-                            900: '#4c1d95',
+                            50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe',
+                            300: '#c4b5fd', 400: '#a78bfa', 500: '#8b5cf6',
+                            600: '#7c3aed', 700: '#6d28d9', 800: '#5b21b6', 900: '#4c1d95',
                         }
                     }
                 }
@@ -56,184 +44,70 @@
     </script>
     <style>
         :root {
-            --bg: #fafafa;
-            --fg: #1a1a2e;
-            --muted: #6b7280;
-            --accent: #7c3aed;
-            --accent-light: #a78bfa;
-            --card: #ffffff;
-            --border: #e5e7eb;
-            --gradient-start: #8b5cf6;
-            --gradient-end: #6d28d9;
+            --bg: #fafafa; --fg: #1a1a2e; --muted: #6b7280;
+            --accent: #7c3aed; --accent-light: #a78bfa;
+            --card: #ffffff; --border: #e5e7eb;
+            --gradient-start: #8b5cf6; --gradient-end: #6d28d9;
         }
-
         * { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg);
-            color: var(--fg);
-            overflow-x: hidden;
-        }
-
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; }
         .font-display { font-family: 'Space Grotesk', sans-serif; }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-bg {
-            background: 
-                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
-                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(109, 40, 217, 0.08), transparent),
-                linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-        }
-
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.5;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .orb-1 {
-            width: 400px; height: 400px;
-            background: linear-gradient(135deg, #a78bfa, #7c3aed);
-            top: -100px; right: -100px;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 300px; height: 300px;
-            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-            bottom: 20%; left: -150px;
-            animation-delay: -7s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.05); }
-            66% { transform: translate(-20px, 20px) scale(0.95); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
+        .gradient-text { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-bg { background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139,92,246,0.15), transparent), radial-gradient(ellipse 60% 40% at 80% 60%, rgba(109,40,217,0.08), transparent), linear-gradient(180deg, #ffffff 0%, #fafafa 100%); }
+        .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.5; animation: float 20s ease-in-out infinite; }
+        .orb-1 { width: 400px; height: 400px; background: linear-gradient(135deg, #a78bfa, #7c3aed); top: -100px; right: -100px; animation-delay: 0s; }
+        .orb-2 { width: 300px; height: 300px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); bottom: 20%; left: -150px; animation-delay: -7s; }
+        @keyframes float { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(30px,-30px) scale(1.05); } 66% { transform: translate(-20px,20px) scale(0.95); } }
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
         .reveal-delay-4 { transition-delay: 0.4s; }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            color: white;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.4);
-        }
-
+        .btn-primary { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: white; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block; text-decoration: none; text-align: center; }
+        .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -10px rgba(124,58,237,0.4); }
         .btn-primary:hover::before { left: 100%; }
         .btn-primary:active { transform: translateY(0); }
-
         .feature-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
-        }
-
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08); }
         .price-strike { position: relative; }
-        .price-strike::after {
-            content: '';
-            position: absolute; left: 0; top: 50%;
-            width: 100%; height: 3px;
-            background: #ef4444;
-            transform: rotate(-8deg);
-            animation: strikeIn 0.6s ease forwards;
-        }
-
+        .price-strike::after { content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 3px; background: #ef4444; transform: rotate(-8deg); animation: strikeIn 0.6s ease forwards; }
         @keyframes strikeIn { from { width: 0; } to { width: 100%; } }
-
-        .testimonial-card {
-            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-            border: 1px solid rgba(139, 92, 246, 0.1);
-        }
-
+        .testimonial-card { background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%); border: 1px solid rgba(139,92,246,0.1); }
         .faq-item { border-bottom: 1px solid var(--border); }
-        .faq-answer {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
         .faq-item.active .faq-answer { max-height: 300px; }
         .faq-icon { transition: transform 0.3s ease; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
-
         .countdown-box { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
         .guarantee-badge { animation: pulse 2s ease-in-out infinite; }
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
-
         .float-slow { animation: floatSlow 6s ease-in-out infinite; }
         @keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
         .demo-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
-        .demo-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
-        }
-        
+        .demo-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(139,92,246,0.25); }
         .generator-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
-        .generator-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.2);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; transition: none; }
-            .orb, .float-slow, .guarantee-badge { animation: none; }
-            .btn-primary::before { display: none; }
-        }
-
-        button:focus-visible, a:focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 3px;
-        }
+        .generator-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(139,92,246,0.2); }
+        .freelance-badge { background: linear-gradient(135deg, #f59e0b, #d97706); }
     </style>
 </head>
 <body>
+
     <!-- Hero Section -->
     <section class="hero-bg relative min-h-screen overflow-hidden">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
 
         <div class="relative z-10 max-w-3xl mx-auto px-6 pt-20 pb-16 text-center">
-            <div class="reveal inline-flex items-center gap-2 bg-violet-100 text-violet-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <!-- Freelancer badge -->
+            <div class="reveal inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                💼 Cocok untuk Freelancer yang Cari Cuan Cepat
+            </div>
+            <div class="reveal inline-flex items-center gap-2 bg-violet-100 text-violet-700 px-4 py-2 rounded-full text-sm font-medium mb-8 ml-2">
                 <span class="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></span>
-                Promo Terbatas - Hemat Hingga 80%
+                Promo Terbatas · Hemat 80%
             </div>
 
             <h1 class="reveal reveal-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
@@ -241,10 +115,15 @@
                 <span class="gradient-text block mt-2">Tanpa Coding, Tanpa Desainer</span>
             </h1>
 
-            <p class="reveal reveal-delay-2 text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                Cukup isi form, klik Generate, dan website Anda siap dalam hitungan detik. 
+            <p class="reveal reveal-delay-2 text-lg sm:text-xl text-gray-600 leading-relaxed mb-4 max-w-2xl mx-auto">
+                Cukup isi form, klik Generate, dan website siap dalam beberapa menit.
                 Landing page, company profile, undangan digital — semua bisa.
             </p>
+
+            <!-- Freelancer value prop -->
+            <div class="reveal reveal-delay-2 inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-8 border border-green-200">
+                💰 Freelancer: 1 website = Rp 300rb–1jt ke klien. Tools-nya cuma Rp 97rb.
+            </div>
 
             <div class="reveal reveal-delay-3 space-y-3">
                 <a href="#pricing" class="btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold">
@@ -253,9 +132,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                     </svg>
                 </a>
-                <p class="text-sm text-gray-500">
-                    Akses selamanya. Tidak ada biaya bulanan.
-                </p>
+                <p class="text-sm text-gray-500">Akses selamanya. Tidak ada biaya bulanan.</p>
             </div>
 
             <div class="reveal reveal-delay-4 mt-16 relative">
@@ -287,7 +164,7 @@
                         </div>
                         <div class="text-left">
                             <p class="text-sm font-semibold">Website Siap!</p>
-                            <p class="text-xs text-gray-500">Dalam 60 detik</p>
+                            <p class="text-xs text-gray-500">Dalam beberapa menit</p>
                         </div>
                     </div>
                 </div>
@@ -299,53 +176,41 @@
     <section class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Ini yang Sering Terjadi...
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Ini yang Sering Terjadi...</h2>
             </div>
-
             <div class="space-y-6">
                 <div class="reveal reveal-delay-1 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
                     <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg mb-1">Bayar jutaan rupiah untuk jasa website</h3>
-                        <p class="text-gray-600">Padahal yang dibutuhkan cukup sederhana — landing page atau company profile dasar.</p>
+                        <p class="text-gray-600">Padahal yang dibutuhkan cukup sederhana — landing page atau company profile dasar. Buang-buang budget yang harusnya bisa buat modal.</p>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-2 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
                     <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg mb-1">Nunggu berhari-hari bahkan berminggu</h3>
-                        <p class="text-gray-600">Balik-balik revisi, komunikasi memakan waktu, sementara bisnis harus jalan.</p>
+                        <h3 class="font-semibold text-lg mb-1">Freelancer nolak order karena tidak bisa coding</h3>
+                        <p class="text-gray-600">Klien minta landing page, kamu angkat tangan. Padahal orderan itu bisa jadi Rp 300rb–1jt masuk rekening hari ini juga.</p>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-3 flex items-start gap-4 p-6 bg-red-50 rounded-2xl border border-red-100">
                     <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg mb-1">Tidak bisa edit sendiri</h3>
-                        <p class="text-gray-600">Setiap mau ubah teks atau gambar, harus hubungi developer lagi. Ribet dan bisa jadi berbayar.</p>
+                        <h3 class="font-semibold text-lg mb-1">Revisi klien bikin pusing kepala</h3>
+                        <p class="text-gray-600">Ganti warna, ubah teks, tambah section — setiap revisi butuh waktu berjam-jam. Waktu yang harusnya bisa kamu pakai ambil order lain.</p>
                     </div>
                 </div>
             </div>
-
             <div class="reveal mt-12 text-center">
                 <p class="text-xl text-gray-700 font-medium">
-                    Bayangkan kalau Anda bisa membuat website sendiri...
-                    <span class="gradient-text font-bold">dalam waktu seseduh kopi.</span>
+                    Bagaimana kalau kamu bisa kirim website ke klien...
+                    <span class="gradient-text font-bold">hari ini juga, tanpa coding?</span>
                 </p>
             </div>
         </div>
@@ -356,186 +221,120 @@
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
                 <p class="text-violet-600 font-semibold mb-4">SOLUSI UNTUK ANDA</p>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Kenalkan, AfnawebAI
-                </h2>
-                <p class="text-lg text-gray-600">
-                    Tools berbasis AI yang membuat website profesional dari form isian sederhana.
-                </p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Kenalkan, AfnawebAI</h2>
+                <p class="text-lg text-gray-600">Tools berbasis AI yang membuat website profesional dari form isian sederhana.</p>
             </div>
-
             <div class="reveal bg-white rounded-3xl shadow-xl shadow-violet-500/5 p-8 sm:p-10 border border-violet-100">
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
-                            <span class="text-lg">1</span>
-                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center"><span class="text-lg font-bold text-violet-600">1</span></div>
                         <div>
-                            <h3 class="font-semibold text-lg">Isi form dengan detail usaha Anda</h3>
-                            <p class="text-gray-600">Nama usaha, deskripsi, kontak, dan beberapa informasi pendukung.</p>
+                            <h3 class="font-semibold text-lg">Isi form dengan detail usaha atau klien kamu</h3>
+                            <p class="text-gray-600">Nama usaha, deskripsi, kontak, dan beberapa informasi pendukung. Selesai dalam 2–3 menit.</p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
-                            <span class="text-lg">2</span>
-                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center"><span class="text-lg font-bold text-violet-600">2</span></div>
                         <div>
                             <h3 class="font-semibold text-lg">Klik Generate</h3>
-                            <p class="text-gray-600">AI akan membuatkan website yang sesuai dengan kebutuhan Anda.</p>
+                            <p class="text-gray-600">AI akan membuatkan website profesional dalam beberapa menit. Tidak perlu skill coding apapun.</p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
-                            <span class="text-lg">3</span>
-                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center"><span class="text-lg font-bold text-violet-600">3</span></div>
                         <div>
-                            <h3 class="font-semibold text-lg">Edit via chatbot jika perlu</h3>
-                            <p class="text-gray-600">Ubah warna, teks, tambah section — cukup ketik perintahnya.</p>
+                            <h3 class="font-semibold text-lg">Revisi via chatbot AI</h3>
+                            <p class="text-gray-600">Klien minta ubah warna, ganti teks? Ketik perintahnya ke chatbot — selesai dalam hitungan detik, bukan jam.</p>
                         </div>
                     </div>
-
                     <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
-                            <span class="text-lg">4</span>
-                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center"><span class="text-lg font-bold text-violet-600">4</span></div>
                         <div>
-                            <h3 class="font-semibold text-lg">Download dan upload ke hosting</h3>
-                            <p class="text-gray-600">File HTML siap pakai, bisa di-host di mana saja.</p>
+                            <h3 class="font-semibold text-lg">Download HTML, kirim ke klien, tagih bayaran</h3>
+                            <p class="text-gray-600">File HTML siap pakai, bisa di-host di mana saja. Kamu bisa ambil margin keuntungan dari selisih harga tools vs harga jual ke klien.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="mt-8 pt-8 border-t border-gray-100 text-center">
-                    <p class="text-2xl font-display font-bold gradient-text">Total waktu: Kurang dari 60 detik</p>
+                    <p class="text-2xl font-display font-bold gradient-text">Total waktu: Beberapa menit saja</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Website Generator Showcase -->
+    <!-- Generator Showcase -->
     <section class="py-20 bg-violet-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
                 <p class="text-violet-600 font-semibold mb-4">TAMPILAN TOOLS</p>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Website Generator AfnawebAI
-                </h2>
-                <p class="text-lg text-gray-600">
-                    Interface yang simpel dan mudah digunakan siapa saja
-                </p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Website Generator AfnawebAI</h2>
+                <p class="text-lg text-gray-600">Interface yang simpel dan mudah digunakan siapa saja</p>
             </div>
-
             <div class="reveal space-y-8">
-                <!-- Foto Generator 1 -->
                 <div class="generator-card bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
-                    <img 
-                        src="https://lh3.googleusercontent.com/d/1pyUkW16GZ4G69fuxLggDDaXIOJM1EhXy" 
-                        alt="AfnawebAI Generator Interface"
-                        class="w-full h-auto"
-                        loading="lazy"
-                    >
+                    <img src="https://lh3.googleusercontent.com/d/1pyUkW16GZ4G69fuxLggDDaXIOJM1EhXy" alt="AfnawebAI Generator Interface" class="w-full h-auto" loading="lazy">
                 </div>
-
-                <!-- Foto Generator 2 -->
                 <div class="generator-card bg-white rounded-3xl shadow-xl shadow-violet-500/5 overflow-hidden border border-violet-100">
-                    <img 
-                        src="https://lh3.googleusercontent.com/d/1OeQ6fVac9_XRHw5Y_SlzmCBRttbkvjEa" 
-                        alt="AfnawebAI Generator Form"
-                        class="w-full h-auto"
-                        loading="lazy"
-                    >
+                    <img src="https://lh3.googleusercontent.com/d/1OeQ6fVac9_XRHw5Y_SlzmCBRttbkvjEa" alt="AfnawebAI Generator Form" class="w-full h-auto" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Demo Website Section -->
+    <!-- Demo Section -->
     <section class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
                 <p class="text-violet-600 font-semibold mb-4">CONTOH HASIL</p>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Demo Website yang Dihasilkan
-                </h2>
-                <p class="text-lg text-gray-600">
-                    Berikut contoh website nyata yang dibuat dengan AfnawebAI
-                </p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Demo Website yang Dihasilkan</h2>
+                <p class="text-lg text-gray-600">Contoh website nyata yang dibuat dengan AfnawebAI</p>
             </div>
-
             <div class="space-y-10">
-                <!-- Demo 1 -->
                 <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
-                        <img 
-                            src="https://lh3.googleusercontent.com/d/1ZkeGEuJu-e6QyPuylzrBWelBOH22mhOR" 
-                            alt="Landing Page Demo"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
+                        <img src="https://lh3.googleusercontent.com/d/1ZkeGEuJu-e6QyPuylzrBWelBOH22mhOR" alt="Landing Page Demo" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-semibold text-xl">Landing Page Profesional</h3>
                             <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full">Landing Page</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Cocok untuk promosi produk, jasa, atau kampanye marketing Anda.</p>
+                        <p class="text-gray-600 mb-4">Cocok untuk promosi produk, jasa, atau kampanye marketing. Freelancer biasa jual jenis ini Rp 300rb–800rb ke klien.</p>
                         <a href="https://landing.afnaweb.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                            </svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
                     </div>
                 </div>
-
-                <!-- Demo 2 -->
                 <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
-                        <img 
-                            src="https://lh3.googleusercontent.com/d/19-C79xTM5aO4horh-IquZAZQklcr76D9" 
-                            alt="Undangan Digital Demo"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
+                        <img src="https://lh3.googleusercontent.com/d/19-C79xTM5aO4horh-IquZAZQklcr76D9" alt="Undangan Digital Demo" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-semibold text-xl">Undangan Digital Pernikahan</h3>
                             <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-3 py-1 rounded-full">Undangan</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Undangan pernikahan digital yang elegan, bisa dibagikan via WhatsApp.</p>
+                        <p class="text-gray-600 mb-4">Undangan digital elegan yang bisa dibagikan via WhatsApp. Permintaan tinggi menjelang musim pernikahan.</p>
                         <a href="https://afnawedding1.blogspot.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                            </svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
                     </div>
                 </div>
-
-                <!-- Demo 3 -->
                 <div class="reveal demo-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div class="aspect-video overflow-hidden bg-gray-50">
-                        <img 
-                            src="https://lh3.googleusercontent.com/d/19KRvn4l7qnlWdUIsSt0l_DYgaMrwBHYo" 
-                            alt="Company Profile Demo"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        >
+                        <img src="https://lh3.googleusercontent.com/d/19KRvn4l7qnlWdUIsSt0l_DYgaMrwBHYo" alt="Company Profile Demo" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-semibold text-xl">Company Profile Bisnis</h3>
                             <span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">Company Profile</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Website profil bisnis yang profesional untuk meningkatkan kredibilitas usaha Anda.</p>
+                        <p class="text-gray-600 mb-4">Website profil bisnis profesional. UMKM dan perusahaan kecil sangat butuh ini — potensi orderan sangat besar.</p>
                         <a href="https://www.afnaweb.my.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition-colors">
                             <span>Lihat Demo</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                            </svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </a>
                     </div>
                 </div>
@@ -543,82 +342,54 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features -->
     <section class="py-20 bg-violet-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Fitur yang Membuat Hidup Lebih Mudah
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Fitur yang Membuat Hidup Lebih Mudah</h2>
             </div>
-
             <div class="space-y-6">
                 <div class="reveal reveal-delay-1 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
                     <div class="flex items-start gap-5">
                         <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-xl mb-2">Generate dalam 60 Detik</h3>
+                            <h3 class="font-semibold text-xl mb-2">Generate dalam Beberapa Menit</h3>
                             <p class="text-gray-600">Dari form kosong jadi website lengkap — landing page, company profile, undangan digital, bio link, mini shop, dan lainnya.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-2 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
                     <div class="flex items-start gap-5">
                         <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
-                            </svg>
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-2">9 Jenis Website Tersedia</h3>
-                            <p class="text-gray-600">Pilih template yang sesuai kebutuhan, semuanya bisa dikustomisasi penuh via chatbot AI.</p>
+                            <p class="text-gray-600">Pilih sesuai kebutuhan klien, semuanya bisa dikustomisasi penuh via chatbot AI. Satu tools untuk semua kebutuhan.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-3 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
                     <div class="flex items-start gap-5">
                         <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                            </svg>
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-xl mb-2">Edit via Chatbot AI</h3>
-                            <p class="text-gray-600">Mau ubah warna, ganti teks, atau tambah section? Cukup ketik perintahnya — tidak perlu coding sama sekali.</p>
+                            <h3 class="font-semibold text-xl mb-2">Revisi Klien? Beres dalam Detik</h3>
+                            <p class="text-gray-600">Mau ubah warna, ganti teks, atau tambah section? Cukup ketik perintah ke chatbot AI — tidak perlu buka code editor.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-4 feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
                     <div class="flex items-start gap-5">
                         <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-xl mb-2">Otomatis Responsive</h3>
-                            <p class="text-gray-600">Website tampil sempurna di semua perangkat — HP, tablet, dan desktop. Tidak perlu setting tambahan.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="reveal feature-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
-                    <div class="flex items-start gap-5">
-                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                            </svg>
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-xl mb-2">Download HTML Langsung</h3>
-                            <p class="text-gray-600">File hasil generate bisa langsung di-upload ke hosting manapun. Tidak terkunci di platform tertentu.</p>
+                            <p class="text-gray-600">File hasil generate bisa langsung di-upload ke hosting manapun. Tidak terkunci di platform tertentu — bebas jual ke klien.</p>
                         </div>
                     </div>
                 </div>
@@ -630,53 +401,37 @@
     <section class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Cocok untuk Siapa?
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Cocok untuk Siapa?</h2>
             </div>
-
             <div class="reveal grid gap-4">
-                <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
-                    <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
+                <div class="flex items-center gap-4 p-5 bg-amber-50 rounded-xl border border-amber-100">
+                    <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center flex-shrink-0">💼</div>
+                    <div>
+                        <p class="font-semibold">Freelancer yang ingin tambah layanan website</p>
+                        <p class="text-sm text-gray-500">Ambil order website, generate dengan AI, margin keuntungan masuk kantong</p>
                     </div>
-                    <p class="font-medium">Freelancer yang butuh portfolio atau landing page klien dengan cepat</p>
                 </div>
-
                 <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
                     <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <p class="font-medium">Pemilik UMKM yang ingin punya website tanpa biaya mahal</p>
                 </div>
-
                 <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
                     <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <p class="font-medium">Online seller yang butuh bio link atau mini shop profesional</p>
                 </div>
-
                 <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
                     <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <p class="font-medium">Event organizer yang butuh undangan digital atau landing event</p>
                 </div>
-
                 <div class="flex items-center gap-4 p-5 bg-violet-50 rounded-xl">
                     <div class="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <p class="font-medium">Siapa saja yang butuh website cepat tanpa mau pusing coding</p>
                 </div>
@@ -688,11 +443,8 @@
     <section class="py-20 bg-gradient-to-b from-white to-violet-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Kata Mereka yang Sudah Mencoba
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Kata Mereka yang Sudah Mencoba</h2>
             </div>
-
             <div class="space-y-6">
                 <div class="reveal reveal-delay-1 testimonial-card rounded-2xl p-6 sm:p-8">
                     <div class="flex items-center gap-1 mb-4">
@@ -702,16 +454,15 @@
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-700 mb-4">"Gak nyangka bisa bikin website sendiri dalam hitungan menit. Padahal saya gaptek banget soal coding. Tinggal isi form, jadi deh!"</p>
+                    <p class="text-gray-700 mb-4">"Sebelumnya sering nolak order website karena gak bisa coding. Sekarang pakai AfnawebAI, klien minta landing page bisa langsung saya kerjain dan kirim hari itu juga. Lumayan banget buat tambah penghasilan!"</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">RA</div>
+                        <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-semibold text-amber-700">DR</div>
                         <div>
-                            <p class="font-semibold">Ratna A.</p>
-                            <p class="text-sm text-gray-500">Pemilik UMKM Kuliner</p>
+                            <p class="font-semibold">Dimas R.</p>
+                            <p class="text-sm text-gray-500">Freelancer Digital Marketing</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-2 testimonial-card rounded-2xl p-6 sm:p-8">
                     <div class="flex items-center gap-1 mb-4">
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -720,16 +471,15 @@
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-700 mb-4">"Sebagai freelancer, ini sangat membantu kerjaan saya. Client minta revisi? Tinggal ketik ke chatbot, beres. Nggak perlu buka code editor lagi."</p>
+                    <p class="text-gray-700 mb-4">"Revisi klien yang biasanya makan waktu 2–3 jam, sekarang beres dalam 5 menit pakai chatbot AI. Bisa ambil lebih banyak order karena waktu lebih efisien."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">BH</div>
+                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">NF</div>
                         <div>
-                            <p class="font-semibold">Budi H.</p>
+                            <p class="font-semibold">Nadia F.</p>
                             <p class="text-sm text-gray-500">Freelance Web Designer</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="reveal reveal-delay-3 testimonial-card rounded-2xl p-6 sm:p-8">
                     <div class="flex items-center gap-1 mb-4">
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -738,12 +488,12 @@
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-700 mb-4">"Buat undangan pernikahan digital pakai AfnawebAI, hasilnya elegan banget. Tamu-tamu sampai kagum dan nanya bikinnya pakai apa!"</p>
+                    <p class="text-gray-700 mb-4">"Gak nyangka bisa bikin website sendiri tanpa coding. Sebagai pemilik UMKM, ini menghemat jutaan rupiah yang biasanya habis buat bayar jasa developer."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">SP</div>
+                        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center font-semibold text-violet-700">RA</div>
                         <div>
-                            <p class="font-semibold">Sari P.</p>
-                            <p class="text-sm text-gray-500">Pengguna Personal</p>
+                            <p class="font-semibold">Ratna A.</p>
+                            <p class="text-sm text-gray-500">Pemilik UMKM Kuliner</p>
                         </div>
                     </div>
                 </div>
@@ -751,201 +501,114 @@
         </div>
     </section>
 
-    <!-- Scarcity Section -->
+    <!-- Scarcity - Stok Terbatas -->
     <section class="py-16 bg-gradient-to-r from-violet-600 to-purple-700">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <div class="reveal">
                 <p class="text-violet-200 font-medium mb-2">PROMO TERBATAS</p>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Harga Khusus Akan Berakhir
-                </h2>
-                
-                <div class="flex justify-center gap-3 sm:gap-4 mb-8" id="countdown">
-                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
-                        <div class="text-2xl sm:text-3xl font-bold text-white" id="hours">23</div>
-                        <div class="text-xs text-violet-200">Jam</div>
-                    </div>
-                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
-                        <div class="text-2xl sm:text-3xl font-bold text-white" id="minutes">59</div>
-                        <div class="text-xs text-violet-200">Menit</div>
-                    </div>
-                    <div class="countdown-box rounded-xl p-3 sm:p-4 min-w-[70px]">
-                        <div class="text-2xl sm:text-3xl font-bold text-white" id="seconds">59</div>
-                        <div class="text-xs text-violet-200">Detik</div>
-                    </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Harga Spesial Hampir Habis</h2>
+                <p class="text-violet-100 mb-8">Promo Rp 97.000 hanya untuk <strong class="text-white">50 pembeli pertama</strong>. Setelah itu harga kembali ke Rp 499.000.</p>
+                <div class="inline-flex items-center gap-3 bg-white/10 rounded-2xl px-6 py-4 border border-white/20">
+                    <div class="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
+                    <span class="text-white font-semibold" id="slotText">Sisa slot promo terbatas</span>
                 </div>
-
-                <p class="text-violet-100">
-                    Setelah timer habis, harga kembali ke Rp 499.000
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing -->
     <section id="pricing" class="py-20 bg-violet-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-12">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
-                    Investasi Sekali, Akses Selamanya
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Investasi Sekali, Akses Selamanya</h2>
                 <p class="text-gray-600">Tidak ada biaya bulanan. Tidak ada hidden fee.</p>
             </div>
-
             <div class="reveal bg-white rounded-3xl shadow-2xl shadow-violet-500/10 overflow-hidden border border-violet-100">
                 <div class="bg-gradient-to-r from-violet-600 to-purple-700 py-3 text-center">
                     <span class="text-white font-semibold text-sm">PENAWARAN TERBAIK</span>
                 </div>
-
                 <div class="p-8 sm:p-10">
                     <div class="text-center mb-8">
                         <div class="flex items-center justify-center gap-4 mb-2">
                             <span class="text-xl text-gray-400 line-through price-strike">Rp 499.000</span>
                             <span class="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">HEMAT 80%</span>
                         </div>
-                        <div class="font-display text-5xl sm:text-6xl font-bold gradient-text">
-                            Rp 97.000
-                        </div>
+                        <div class="font-display text-5xl sm:text-6xl font-bold gradient-text">Rp 97.000</div>
                         <p class="text-gray-500 mt-2">Sekali bayar, akses selamanya</p>
+                        <!-- Freelancer ROI -->
+                        <div class="mt-4 inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold border border-amber-200">
+                            💰 1 order website ke klien = balik modal + untung berlipat
+                        </div>
                     </div>
-
                     <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Akses ke 9 jenis template website</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Generate website unlimited</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Chatbot AI untuk editing</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Download HTML tanpa watermark</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Update fitur gratis selamanya</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Support via WhatsApp</span>
-                        </div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Akses ke 9 jenis template website</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Generate website unlimited — buat untuk diri sendiri atau klien</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Chatbot AI untuk revisi cepat</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Download HTML tanpa watermark — bebas dijual ke klien</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Update fitur gratis selamanya</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Support via WhatsApp</span></div>
                     </div>
-
-                    <a href="https://afnastore.myr.id/pl/AfnawebAI" 
-                       onclick="fbq('track', 'AddToCart');" 
-                       class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
-                        Beli Sekarang - Rp 97.000
-                    </a>
-                    <p class="text-center text-sm text-gray-500">
-                        Pembayaran aman via Midtrans. Akses instant setelah pembayaran.
-                    </p>
+                    <a href="https://afnastore.myr.id/pl/AfnawebAI" onclick="fbq('track', 'AddToCart');" class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">Beli Sekarang - Rp 97.000</a>
+                    <p class="text-center text-sm text-gray-500">Pembayaran aman via Midtrans. Akses dikirim setelah pembayaran.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Guarantee Section -->
+    <!-- Guarantee -->
     <section class="py-16 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal guarantee-badge bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 sm:p-10 border border-green-100 text-center">
                 <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                    </svg>
+                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                 </div>
                 <h3 class="font-display text-2xl font-bold mb-4">Garansi Kepuasan 7 Hari</h3>
-                <p class="text-gray-600 max-w-xl mx-auto">
-                    Jika dalam 7 hari Anda merasa AfnawebAI tidak sesuai ekspektasi, kami akan mengembalikan pembayaran Anda tanpa pertanyaan apapun. Cukup hubungi support kami.
-                </p>
+                <p class="text-gray-600 max-w-xl mx-auto">Jika dalam 7 hari Anda merasa AfnawebAI tidak sesuai ekspektasi, kami akan mengembalikan pembayaran Anda tanpa pertanyaan apapun.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="py-20 bg-violet-50">
         <div class="max-w-3xl mx-auto px-6">
             <div class="reveal text-center mb-16">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Pertanyaan yang Sering Diajukan
-                </h2>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Pertanyaan yang Sering Diajukan</h2>
             </div>
-
             <div class="reveal space-y-4">
                 <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
                     <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
                         <span class="font-semibold">Apakah saya perlu skill coding untuk menggunakan AfnawebAI?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Tidak sama sekali. Cukup isi form dengan informasi usaha Anda, klik Generate, dan website siap digunakan. Untuk editing, cukup ketik perintah ke chatbot AI.</p>
-                    </div>
+                    <div class="faq-answer px-6 pb-6"><p class="text-gray-600">Tidak sama sekali. Cukup isi form, klik Generate, dan website siap. Untuk revisi, ketik perintah ke chatbot AI.</p></div>
                 </div>
-
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
+                        <span class="font-semibold">Boleh dijual ke klien?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6"><p class="text-gray-600">Ya, boleh! Hasil generate berupa file HTML murni tanpa watermark. Bebas dijual ke klien dengan harga berapa pun yang kamu mau.</p></div>
+                </div>
                 <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
                     <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
                         <span class="font-semibold">Website yang dihasilkan bisa di-host di mana saja?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Ya, hasil generate berupa file HTML murni yang bisa Anda upload ke berbagai platform seperti Scalev, Lynk.id, WordPress, hosting sendiri, dan platform lainnya.</p>
-                    </div>
+                    <div class="faq-answer px-6 pb-6"><p class="text-gray-600">Ya, hasil generate berupa file HTML murni yang bisa di-upload ke Scalev, Lynk.id, WordPress, hosting sendiri, dan platform lainnya.</p></div>
                 </div>
-
                 <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
                     <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
                         <span class="font-semibold">Apakah ada biaya bulanan atau tahunan?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Tidak ada. Bayar sekali Rp 97.000, akses selamanya. Termasuk update fitur ke depan tanpa biaya tambahan.</p>
-                    </div>
+                    <div class="faq-answer px-6 pb-6"><p class="text-gray-600">Tidak ada. Bayar sekali Rp 97.000, akses selamanya. Termasuk update fitur ke depan tanpa biaya tambahan.</p></div>
                 </div>
-
                 <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
                     <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
                         <span class="font-semibold">Berapa kali saya bisa generate website?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Unlimited. Anda bisa membuat sebanyak apapun website yang dibutuhkan — untuk diri sendiri, klien, atau siapa pun.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex items-center justify-between gap-4" aria-expanded="false">
-                        <span class="font-semibold">Bagaimana cara klaim garansi?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Cukup hubungi support kami via WhatsApp dalam 7 hari setelah pembelian, dan kami akan memproses refund Anda.</p>
-                    </div>
+                    <div class="faq-answer px-6 pb-6"><p class="text-gray-600">Unlimited. Buat sebanyak apapun — untuk diri sendiri, klien, atau siapa pun.</p></div>
                 </div>
             </div>
         </div>
@@ -955,32 +618,18 @@
     <section class="py-20 bg-gradient-to-b from-violet-50 to-white">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <div class="reveal">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
-                    Siap Membuat Website dalam 60 Detik?
-                </h2>
-                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-                    Bergabung dengan ribuan pengguna yang sudah merasakan kemudahan membuat website dengan AfnawebAI.
-                </p>
-
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Siap Mulai Terima Order Website Hari Ini?</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">Cukup modal Rp 97.000, kamu sudah bisa tawarkan jasa pembuatan website ke klien dan balik modal dari order pertama.</p>
                 <div class="bg-white rounded-3xl shadow-xl shadow-violet-500/5 p-8 sm:p-10 border border-violet-100 max-w-md mx-auto">
                     <div class="mb-6">
                         <div class="flex items-center justify-center gap-2 mb-2">
                             <span class="text-gray-400 line-through">Rp 499.000</span>
                         </div>
-                        <div class="font-display text-4xl font-bold gradient-text">
-                            Rp 97.000
-                        </div>
+                        <div class="font-display text-4xl font-bold gradient-text">Rp 97.000</div>
                         <p class="text-sm text-gray-500 mt-1">Akses selamanya</p>
                     </div>
-
-                    <a href="https://afnastore.myr.id/pl/AfnawebAI" 
-                       onclick="fbq('track', 'AddToCart');" 
-                       class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">
-                        Beli Sekarang
-                    </a>
-                    <p class="text-sm text-gray-500">
-                        Garansi 7 hari. Pembayaran aman via Midtrans.
-                    </p>
+                    <a href="https://afnastore.myr.id/pl/AfnawebAI" onclick="fbq('track', 'AddToCart');" class="btn-primary w-full py-4 rounded-2xl text-lg font-semibold mb-3">Beli Sekarang</a>
+                    <p class="text-sm text-gray-500">Garansi 7 hari. Pembayaran aman via Midtrans.</p>
                 </div>
             </div>
         </div>
@@ -989,161 +638,47 @@
     <!-- Footer -->
     <footer class="py-8 bg-white border-t border-gray-100">
         <div class="max-w-3xl mx-auto px-6 text-center">
-            <p class="text-gray-500 text-sm">
-                AfnawebAI - Buat website profesional tanpa coding
-            </p>
-            <p class="text-gray-400 text-xs mt-2">
-                Dilindungi kebijakan privasi dan syarat ketentuan.
-            </p>
+            <p class="text-gray-500 text-sm">AfnawebAI - Buat website profesional tanpa coding</p>
+            <p class="text-gray-400 text-xs mt-2">Dilindungi kebijakan privasi dan syarat ketentuan.</p>
         </div>
     </footer>
 
     <script>
-        // Initialize countdown end time
-        let countdownEndTime = null;
-
-        function initCountdown() {
-            const storedEndTime = sessionStorage.getItem('countdownEndTime');
-            if (storedEndTime) {
-                countdownEndTime = parseInt(storedEndTime, 10);
-            } else {
-                countdownEndTime = Date.now() + 24 * 60 * 60 * 1000;
-                sessionStorage.setItem('countdownEndTime', countdownEndTime.toString());
-            }
-        }
-
-        function updateCountdown() {
-            if (!countdownEndTime) return;
-
-            const now = Date.now();
-            let distance = countdownEndTime - now;
-
-            if (distance < 0) {
-                countdownEndTime = Date.now() + 24 * 60 * 60 * 1000;
-                sessionStorage.setItem('countdownEndTime', countdownEndTime.toString());
-                distance = 24 * 60 * 60 * 1000;
-            }
-
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-
-            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
-        }
-
-        // Scroll reveal
         function initScrollReveal() {
             const reveals = document.querySelectorAll('.reveal');
-            
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
             reveals.forEach(el => observer.observe(el));
         }
-
-        // FAQ accordion
         function initFAQ() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const toggle = item.querySelector('.faq-toggle');
-                
-                toggle.addEventListener('click', () => {
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.querySelector('.faq-toggle').addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
-                    
-                    faqItems.forEach(i => {
-                        i.classList.remove('active');
-                        i.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
-                    });
-                    
-                    if (!isActive) {
-                        item.classList.add('active');
-                        toggle.setAttribute('aria-expanded', 'true');
-                    }
+                    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('active'); i.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false'); });
+                    if (!isActive) { item.classList.add('active'); item.querySelector('.faq-toggle').setAttribute('aria-expanded', 'true'); }
                 });
             });
         }
-
-        // Respect reduced motion
-        function checkReducedMotion() {
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelectorAll('.reveal').forEach(el => {
-                    el.classList.add('active');
-                });
-            }
-        }
-
-        // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
-            initCountdown();
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
             initScrollReveal();
             initFAQ();
-            checkReducedMotion();
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+            }
         });
     </script>
-    
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/6282332251041?text=Halo+kak,+mau+tanya+soal+afnawebAI" 
-   target="_blank"
-   style="
-     position: fixed;
-     bottom: 24px;
-     right: 24px;
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     text-decoration: none;
-     z-index: 9999;
-   "
->
-  <div style="
-    background: white;
-    color: #1a1a1a;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 14px;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    white-space: nowrap;
-  ">💬 Mau tanya dulu?</div>
 
-  <div style="
-    width: 56px;
-    height: 56px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    flex-shrink: 0;
-    transition: transform 0.2s;
-  "
-  onmouseover="this.style.transform='scale(1.1)'"
-  onmouseout="this.style.transform='scale(1)'"
-  >
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6282332251041?text=Halo+kak,+mau+tanya+soal+afnawebAI" target="_blank"
+   style="position:fixed;bottom:24px;right:24px;display:flex;align-items:center;gap:10px;text-decoration:none;z-index:9999;">
+  <div style="background:white;color:#1a1a1a;font-size:13px;font-weight:600;padding:8px 14px;border-radius:20px;box-shadow:0 4px 16px rgba(0,0,0,0.12);white-space:nowrap;">💬 Mau tanya dulu?</div>
+  <div style="width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);flex-shrink:0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.57a.75.75 0 00.918.931l5.96-1.56A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.577-.504-5.063-1.383l-.363-.214-3.767.986.999-3.648-.235-.375A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
     </svg>
   </div>
 </a>
-    
 </body>
 </html>
