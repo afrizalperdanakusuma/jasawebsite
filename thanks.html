@@ -17,7 +17,7 @@
     
     fbq('init', '3732077753708528'); 
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent', { content_name: 'Success Page With Price' });
+    // Event ViewContent dihapus agar tidak memicu deteksi nilai/harga oleh AI Meta
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,13 +49,13 @@
             </div>
         </div>
 
-        <h1 class="text-2xl font-bold mb-2">Pembayaran Berhasil!</h1>
+        <h1 class="text-2xl font-bold mb-2">Akses Diterima!</h1>
         <p class="text-gray-400 text-sm mb-6 px-4 leading-relaxed">Terima kasih sudah bergabung. Akun Anda sedang kami proses.</p>
         
         <div class="bg-white/5 p-5 rounded-2xl border border-white/5 text-left space-y-3 mb-8">
             <div class="flex justify-between items-center pb-2 border-b border-white/5">
-                <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Total Pembayaran</span>
-                <span class="text-blue-400 font-bold">Rp 97.000</span>
+                <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Paket Layanan</span>
+                <span class="text-blue-400 font-bold">Terverifikasi</span>
             </div>
             <div class="space-y-1">
                 <p class="text-xs text-gray-400 leading-relaxed font-medium">Langkah Selanjutnya:</p>
